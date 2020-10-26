@@ -92,7 +92,7 @@ public class AvroRecordWriterProvider
           // Making schema null to invalidate file corrupted due to connection failure
           schema = null;
           /*
-          Wrapped into ConnectException so that setResetTimeout() is called in the
+          Wrapped into ConnectException so that setRetryTimeout() is called in the
           TopicPartitionWriter class to retry the records.
           */
           throw new ConnectException(ex);
